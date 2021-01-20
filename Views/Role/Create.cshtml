@@ -1,0 +1,38 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityRole
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Add new role</h1>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+           <div class="card card-primary">
+              <!-- form start -->
+              <form asp-action="Create" method="post">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="Name"></label>
+                        <input asp-for="Name" class="form-control" placeholder="Enter role">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                 
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </section>
+</section>
